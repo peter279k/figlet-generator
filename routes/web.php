@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return View('welcome');
-});
+Route::get('/', 'WelcomeController@showWelcome');
 
-Route::post('/figlet', function () {
-    return 'process figlet json data';
-});
+Route::get('/about', 'WelcomeController@showAbout');
+
+Route::post('figlet/generate', 'GenerateFigletController@genFiglet');

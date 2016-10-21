@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "141263425d0139f3612b724e5b88134d",
-    "content-hash": "ce79c2476771d8809a1e757ae13bc371",
+    "hash": "95d7019f579d99a894eab31e6599be7e",
+    "content-hash": "22bb747a032f4f73d2baadee97d96ff9",
     "packages": [
         {
             "name": "alrik11es/cowsayphp",
@@ -838,6 +838,57 @@
                 "random"
             ],
             "time": "2016-10-17 15:23:22"
+        },
+        {
+            "name": "povils/figlet",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/povils/figlet.git",
+                "reference": "bbf74a7e6cbfe74e2ddeca0c49a9454664a47445"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/povils/figlet/zipball/bbf74a7e6cbfe74e2ddeca0c49a9454664a47445",
+                "reference": "bbf74a7e6cbfe74e2ddeca0c49a9454664a47445",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Povils\\Figlet\\": "src/Figlet"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Povilas Susinskas",
+                    "email": "povilassusinskas@gmail.com"
+                }
+            ],
+            "description": "Figlet text generator - PHP",
+            "keywords": [
+                "ascii",
+                "figlet",
+                "github",
+                "php",
+                "text"
+            ],
+            "time": "2016-04-18 18:53:45"
         },
         {
             "name": "psr/log",
