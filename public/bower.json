@@ -4,6 +4,6 @@
     "dependencies": {
         "jquery": "^2.1",
         "materialize": "^0.97",
-	"html2canvas": "^0.4"
+        "html2canvas": "^0.4"
     }
 }
