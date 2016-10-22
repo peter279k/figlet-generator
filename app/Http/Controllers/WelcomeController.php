@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-
 use Cowsayphp\Farm;
 use Povils\Figlet\Figlet;
 

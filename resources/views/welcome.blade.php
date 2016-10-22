@@ -54,7 +54,7 @@
                         </form>
                         <div class="row">
                             <div class="input-field col s12" name="figlet-forms">
-                                <select id="figlet-type">
+                                <select id="figlet-type" name="figlet-attr">
                                     <option value="" disabled selected>請選擇 "FIGLET" 類型</option>
                                     <option value="whale">鯨魚</option>
                                     <option value="cows">乳牛</option>
@@ -66,45 +66,46 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12" name="figlet-forms">
-                                <select id="figlet-text-color">
+                                <select id="figlet-text-color" name="figlet-attr">
                                     <option value="" disabled selected>請選擇字體顏色</option>
-                                    <option value="yellow">黃色</option>
-                                    <option value="cows"></option>
-                                    <option value="dragon"></option>
-                                    <option value="tux"></option>
-                                    <option value=""></option>
+                                    <option value="#f2f205">黃色</option>
+                                    <option value="#9acd32">綠色</option>
+                                    <option value="#000000">黑色</option>
+                                    <option value="#2dbfff">藍色</option>
+                                    <option value="#f6f3ee">白色</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12" name="figlet-forms">
-                                <select id="figlet-text-color">
+                                <select id="figlet-background-color" name="figlet-attr">
                                     <option value="" disabled selected>請選擇背景顏色</option>
                                     <option value="yellow">黃色</option>
-                                    <option value="cows"></option>
-                                    <option value="dragon"></option>
-                                    <option value="tux"></option>
-                                    <option value=""></option>
+                                    <option value="green">綠色</option>
+                                    <option value="black">黑色</option>
+                                    <option value="blue">藍色</option>
+                                    <option value="white">白色</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12" name="figlet-forms">
-                                <select id="figlet-text-type">
+                                <select id="figlet-text-type" name="figlet-attr">
                                     <option value="" disabled selected>請選擇字體類型</option>
                                     <option value="bold">粗體</option>
-                                    <option value="regular">正常</option>
+                                    <option value="normal">正常</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div id="figlet-area" class="input-field col s12">
                                 <pre id="result-figlet-txt"></pre>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <a href="javascript:" id="download-img-button" class="btn-large waves-effect waves-light orange">下載圖片</a>
+                                <a href="" id="download-img-link"></a>
                             </div>
                         </div>
                     </div>
@@ -139,7 +140,7 @@
                     <div class="row">
                         <div class="col l6 s12">
                             <h5 class="white-text">FIGLET</h5>
-                            <p class="grey-text text-lighten-4">Help you generating the FIGLET texts easily!</p>
+                            <p class="grey-text text-lighten-4">The FIGLET text generator</p>
                         </div>
                     </div>
                 </div>
@@ -152,6 +153,7 @@
             <!--Import jQuery before materialize.js-->
             <script src="/bower_components/jquery/dist/jquery.min.js"></script>
             <script src="/bower_components/materialize/dist/js/materialize.min.js"></script>
+            <script src="/bower_components/html2canvas/build/html2canvas.min.js"></script>
             <script src="/js/app.js"></script>
     </body>
 </html>

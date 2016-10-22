@@ -9,25 +9,42 @@ use Povils\Figlet\Figlet;
 class GenerateFigletController extends Controller
 {
     public function genFiglet() {
-        $messageTxt = filter_input(INPUT_POST, 'message-txt');
+        $messageTxt = filter_input(INPUT_POST, 'message-txt', FILTER_SANITIZE_STRING);
+        $textArr = explode("\n", $messageTxt);
         $action = filter_input(INPUT_POST, 'figlet-type');
 
+        $farm = null;
+        $figlet = null;
+        $result = null;
+
         switch ($action) {
-            case '':
-
+            case 'whale':
+                $farm = Farm::create(\Cowsayphp\Farm\Whale::class);
                 break;
-            case '':
-
+            case 'cows':
+                $farm = Farm::create(\Cowsayphp\Farm\Cow::class);
                 break;
+            case 'dragon':
+                $farm = Farm::create(\Cowsayphp\Farm\Dragon::class);
+                break;
+            case 'tux':
+                $farm = Farm::create(\Cowsayphp\Farm\Tux::class);
+                break;
+            case 'figlet':
+            default:
+                $figlet = new Figlet();
         }
 
-        $cow = Farm::create(\Cowsayphp\Farm\Cow::class);
-        $whale = Farm::create(\Cowsayphp\Farm\Whale::class);
+        if ($farm !== null) {
+            $result = $farm->say($messageTxt);
+        } else {
+            foreach ($textArr as $value) {
+                if ($value !== '') {
+                    $result .= $figlet->setFont('small')->render($value).PHP_EOL;
+                }
+            }
+        }
 
-        $figlet = new Figlet();
-
-        //$texts = $cow->say('HappyBirthday');
-
-        return $figlet->setFont('small')->render('Happy Birthday');
+        return $result;
     }
 }

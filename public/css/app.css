@@ -68,3 +68,12 @@ pre.anim {
   letter-spacing: 0pt;
   overflow: visible;
 }
+
+/* overwrite the dropdown option value color */
+.dropdown-content li > a, .dropdown-content li > span {
+  font-size: 16px;
+  color: #000000;
+  display: block;
+  line-height: 22px;
+  padding: 14px 16px;
+}
