@@ -18,6 +18,7 @@
             <nav class="light-dark lighten-1" role="navigation">
                 <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">FIGLET</a>
                   <ul class="right hide-on-med-and-down">
+                    <li><a id="about-figlet" href="javascript:" target="_blank">About FIGLET</a></li>
                     <li><a href="https://github.com/peter279k/figlet-generator" target="_blank">Fork me on Github</a></li>
                   </ul>
 
@@ -39,6 +40,10 @@
                         <a href="javascript:" id="start-button" class="btn-large waves-effect waves-light black">開始使用</a>
                     </div>
                     </div>
+                </div>
+
+                <div class="container">
+                    <div id="about-figlet-txts" class="row"></div>
                 </div>
 
                 <div class="container">

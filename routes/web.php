@@ -13,6 +13,6 @@
 
 Route::get('/', 'WelcomeController@showWelcome');
 
-Route::get('/about', 'WelcomeController@showAbout');
+Route::get('figlet/about', 'WelcomeController@showAbout');
 
 Route::post('figlet/generate', 'GenerateFigletController@genFiglet');

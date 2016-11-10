@@ -14,7 +14,8 @@ $(function() {
 
     $('#start-button').click(function(e) {
         e.preventDefault = false;
-        $(e.target).hide('slow');
+        $(e.target).hide();
+        $('#about-figlet-txts').hide();
         $('div[name="figlet-forms"]').show('slow');
     });
 
@@ -38,6 +39,23 @@ $(function() {
                 $("#download-img-link").attr('download','figlet.png');
                 document.getElementById('download-img-link').click();
             }
+        });
+    });
+
+    $('#about-figlet').on('click', function(e) {
+        e.preventDefault = false;
+
+        $.get('figlet/about', function(response) {
+             $('#download-img-button').hide();
+             $('div[name="figlet-forms"]').hide();
+             var result = JSON.parse(response);
+             var description = result['description'];
+             var refUrl = result['reference-url'];
+             for (index in refUrl) {
+                 description += refUrl[index];
+             }
+             $('#about-figlet-txts').html(description);
+             $('#about-figlet-txts').show('slow');
         });
     });
 

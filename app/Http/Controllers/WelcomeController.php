@@ -22,4 +22,20 @@ class WelcomeController extends Controller
 
         return View('welcome')->with('cowTexts', $texts);
     }
+
+    public function showAbout() {
+        $aboutTxt = [
+            'description' => '<h5 class="blue-text text-darken-2">這是一個產生 FIGLET 的文字產生器</h5>',
+            'reference-url' => [
+                '<h5 class="blue-text text-darken-2">使用到的專案：</h5>',
+                '<div class="collection">',
+                '<a href="https://github.com/alrik11es/cowsayphp" target="_blank" class="teal-text text-lighten-2 collection-item">cowsayphp</a>',
+                '<a href="https://github.com/povils/figlet" target="_blank" class="teal-text text-lighten-2 collection-item">figlet</a>',
+                '</div>',
+            ],
+        ];
+        $aboutTxt = json_encode($aboutTxt);
+
+        return $aboutTxt;
+    }
 }
