@@ -8,7 +8,8 @@ before_script:
     - bundle exec rackup &
     - sleep 5
     - composer install --prefer-dist --no-interaction
-    - cd public/ && bower install
+    - cd public/ && curl -k https://bowerphp.org/bowerphp.phar > bowerphp.phar && php bower.phar install
+    - cd ../
     - cp .env.example .env
     - php artisan key:generate
     - php artisan serve
