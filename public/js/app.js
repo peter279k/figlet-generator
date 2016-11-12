@@ -44,6 +44,7 @@ $(function() {
 
     $('#about-figlet').on('click', function(e) {
         e.preventDefault = false;
+        $('#start-button').hide();
 
         $.get('figlet/about', function(response) {
              $('#download-img-button').hide();

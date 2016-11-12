@@ -6,7 +6,7 @@ Figlet text generator is a web application that helps you generating the funny F
 
 - finish the unit testing
 
-## Contributing
+## Contribution
 
 Thank you for considering contributing to the Figlet text generator!
 
