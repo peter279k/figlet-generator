@@ -5,6 +5,7 @@
             <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
             <!--Import materialize.css-->
             <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css"  media="screen,projection"/>
+            <link rel="stylesheet" href="bower_components/qunit/qunit/qunit.css">
             <link rel="stylesheet" href="css/app.css"/>
             <link rel="shortcut icon" href="css/favicon.ico">
 
@@ -155,10 +156,18 @@
                     </div>
                 </div>
             </footer>
+
+            <div id="qunit"></div>
+            <div id="qunit-fixture"></div>
+
             <!--Import jQuery before materialize.js-->
             <script src="bower_components/jquery/dist/jquery.min.js"></script>
             <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
             <script src="bower_components/html2canvas/build/html2canvas.min.js"></script>
-            <script src="js/app.js"></script>
+            <script src="bower_components/qunit/qunit/qunit.js"></script>
+            <script src="bower_components/blanket/dist/qunit/blanket.min.js"></script>
+            <script src="js/app.js" data-cover></script>
+            <script src="js/appTest.js"></script>
+
     </body>
 </html>
