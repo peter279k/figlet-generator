@@ -2,6 +2,7 @@
 /public/storage
 /vendor
 /public/bower_components
+/public/tests/*
 /.idea
 Homestead.json
 Homestead.yaml

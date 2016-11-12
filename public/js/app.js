@@ -8,7 +8,6 @@ $(function() {
         }
     });
 
-    $('select[name="figlet-forms"]').hide();
     $('div[name="figlet-forms"]').hide();
     $('#download-img-button').hide();
 
@@ -75,17 +74,17 @@ function requestData() {
         var bgColor =$('#figlet-background-color').val();
         var textType = $('#figlet-text-type').val();
 
-        if (textColor == '') {
-            $('#figlet-text-color option')[1].selected = true;
+        if (textColor == null) {
+            $('#figlet-text-color option')[3].selected = true;
             textColor = $('#figlet-text-color').val();
         }
 
-        if (bgColor == '') {
-            $('#figlet-background-color option')[1].selected = true;
+        if (bgColor == null) {
+            $('#figlet-background-color option')[5].selected = true;
             bgColor =$('#figlet-background-color').val();
         }
 
-        if (textType == '') {
+        if (textType == null) {
             $('#figlet-text-type option')[1].selected = true;
             textType = $('#figlet-text-type').val();
         }
