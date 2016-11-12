@@ -7,6 +7,8 @@ before_script:
     - "sh -e /etc/init.d/xvfb start"
     - bundle exec rackup &
     - sleep 5
+    - composer install --prefer-dist --prefer-lowest --no-interaction
+    - cd public/ && bower install
     - cp .env.example .env
     - php artisan key:generate
     - php artisan serve
