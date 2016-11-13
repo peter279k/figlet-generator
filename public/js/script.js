@@ -1,4 +1,4 @@
-page.open('http://net.tutsplus.com', function () {
+page.open('http://localhost:8000/', function () {
     var qunit = page.evaluate(function () {
         var qunitRes = document.getElementById("qunit-testresult");
         return qunitRes;
