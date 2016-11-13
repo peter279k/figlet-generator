@@ -24,6 +24,12 @@ function waitFor(testFx, onReady, timeOutMillis) {
 };
 
 page.open('http://localhost:8000/', function () {
+    if (status !== 'success') {
+        console.log('unable to access the Network');
+
+        phantom.exit(1);
+    }
+
     waitFor(function() {
         return page.evaluate(function () {
             var qunitRes = document.getElementById("qunit-testresult");
