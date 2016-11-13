@@ -11,10 +11,6 @@ php:
     - "7.0"
 
 before_script:
-    - "export DISPLAY=:99.0"
-    - "sh -e /etc/init.d/xvfb start"
-    - bundle exec rackup &
-    - sleep 5
     - composer install --prefer-dist --no-interaction
     - npm install -g bower
     - cd public/
