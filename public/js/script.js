@@ -23,6 +23,7 @@ function waitFor(testFx, onReady, timeOutMillis) {
     }, 100); //< repeat check every 250ms
 };
 
+page.settings.javascriptEnabled = false;
 page.open('http://localhost:8000/', function (status) {
 
     if (status !== 'success') {
