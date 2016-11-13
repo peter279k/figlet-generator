@@ -26,5 +26,5 @@ before_script:
     - phantomjs --version
 
 script:
-    - curl http://localhost:8000/ > index.html
+    - curl http://localhost:8000/
     - phantomjs public/js/run-qunit.js http://localhost:8000/
