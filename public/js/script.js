@@ -24,7 +24,9 @@ function waitFor(testFx, onReady, timeOutMillis) {
 };
 
 page.open('http://localhost:8000/', function (status) {
+
     if (status !== 'success') {
+        console.log(status);
         console.log('unable to access the Network');
 
         phantom.exit(1);
