@@ -4,6 +4,10 @@ php:
     - "5.6"
     - "7.0"
 
+addons:
+    hosts:
+        - peter.dev
+
 branches:
     only:
         - qunit-testing
@@ -17,7 +21,7 @@ before_script:
     - cp .env.example .env
     - php artisan key:generate
     - chmod -R 777 storage
-    - php artisan serve --port=8000 --host=localhost &
+    - php artisan serve --port=8000 --host=peter.dev &
     - sleep 5
     - mkdir travis-phantomjs
     - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
@@ -26,4 +30,4 @@ before_script:
     - phantomjs --version
 
 script:
-    - phantomjs public/js/run-qunit.js "http://localhost:8000/"
+    - phantomjs public/js/run-qunit.js "http://peter.dev:8000/"
