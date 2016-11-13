@@ -23,4 +23,4 @@ before_script:
     - sleep 5
 
 script:
-    - phantomjs public/js/run-qunit.js "http://localhost:8000/"
+    - phantomjs public/js/run-qunit.js http://localhost:8000/
