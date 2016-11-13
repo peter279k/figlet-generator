@@ -1,3 +1,5 @@
+sudo: false
+
 language: php
 
 php:
@@ -33,3 +35,7 @@ before_script:
 
 script:
     - phantomjs public/js/run-qunit.js "http://peter.dev:8000/"
+
+notifications:
+    email:
+        - kempdogg@gmail.com
