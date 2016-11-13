@@ -1,14 +1,12 @@
-addons:
-    hosts:
-        - localhost
-
-sudo: false
-
 language: php
 
 php:
     - "5.6"
     - "7.0"
+
+branches:
+    only:
+        - qunit-testing
 
 before_script:
     - composer install --prefer-dist --no-interaction
