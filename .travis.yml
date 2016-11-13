@@ -27,4 +27,4 @@ before_script:
     - sleep 5
 
 script:
-    - phantomjs public/js/script.js
+    - phantomjs public/js/script.js "http://localhost:8000/"
