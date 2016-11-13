@@ -23,7 +23,7 @@ function waitFor(testFx, onReady, timeOutMillis) {
     }, 100); //< repeat check every 250ms
 };
 
-page.open('http://localhost:8000/', function () {
+page.open('http://localhost:8000/', function (status) {
     if (status !== 'success') {
         console.log('unable to access the Network');
 
