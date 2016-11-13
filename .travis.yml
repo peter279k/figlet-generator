@@ -1,7 +1,15 @@
+addons:
+    hosts:
+        - localhost
+
+sudo: false
+
 language: php
+
 php:
     - "5.6"
     - "7.0"
+
 before_script:
     - "export DISPLAY=:99.0"
     - "sh -e /etc/init.d/xvfb start"
@@ -14,6 +22,9 @@ before_script:
     - cd ../
     - cp .env.example .env
     - php artisan key:generate
-    - php artisan serve
+    - chmod -R 777 storage
+    - php artisan serve --port=8000 --host=localhost &
+    - sleep 5
+
 script:
     - phantomjs public/js/appTest.js "http://localhost:8000/"
