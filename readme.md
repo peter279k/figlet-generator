@@ -4,7 +4,7 @@ Figlet text generator is a web application that helps you generating the funny F
 
 ## To do lists
 
-- finish the CI testing via travis-ci
+- ~~finish the CI testing via travis-ci~~
 
 ## Unit testing
 
@@ -17,6 +17,8 @@ You can refer the folowing steps to build your own local unit testing environmen
 - download the composer.phar
 
 - download the bowerphp.phar
+
+- do ```chmod 777 storage``` or let the storage folder have the writing permission.
 
 - run ```php composer.phar install``` in root folder
 
