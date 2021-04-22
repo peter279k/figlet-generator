@@ -51,7 +51,6 @@
                         <form class="col s12">
                             <div class="row">
                                 <div class="input-field col s12" name="figlet-forms">
-                                    <i name="msg-label" class="material-icons prefix">mode_edit</i>
                                     <textarea id="message-area" class="materialize-textarea"></textarea>
                                     <label name="msg-label" for="message-area">請輸入文字：</label>
                                 </div>
